@@ -19,3 +19,12 @@ function startTime() {
   }, 1000);
 }
 startTime();
+
+
+
+
+var clockInputElement = document.getElementById('clock-input');
+
+clockInputElement.addEventListener('change', function () {
+  console.log('clock input change');
+});

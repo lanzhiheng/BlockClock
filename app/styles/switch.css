@@ -1,0 +1,77 @@
+/* 开关组件 */
+
+.switch-list {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.switch-list li + li {
+  padding: 10px 0;
+}
+
+.switch-list li:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.switch-title {
+  font-size: 20px;
+  line-height: 1.5;
+  width: 50%;
+  float: left;
+  height: 100%;
+  display: block;
+}
+
+.switch {
+  font-size: 30px;
+  width: 50%;
+  float: left;
+  display: block;
+
+  height: 1em;
+  background: #000;
+  position: relative;
+  border-radius: 0.5em;
+}
+
+.switch-status:before {
+  display: block;
+  position: absolute;
+  font-size: 0.5em;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  content: 'OFF';
+  right: 0.5em;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch-button {
+  height: 0.9em;
+  background: #fff;
+  width: 0.9em;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.1em;
+  transition: 0.5s all linear;
+}
+
+input[type='checkbox']:checked ~ .switch-button {
+  left: calc(100% - 1em);
+}
+
+
+input[type='checkbox']:checked ~ .switch-status:before {
+  content: 'ON';
+  right: auto;
+  left: 0.5em;
+}

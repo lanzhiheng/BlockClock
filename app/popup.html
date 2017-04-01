@@ -2,12 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/container.css">
     <link rel="stylesheet" href="./styles/clock.css">
+    <link rel="stylesheet" href="./styles/switch.css">
   </head>
 
   <body>
     <div id="clock">
     </div>
+
+    <ul class="switch-list">
+      <li>
+        <span class="switch-title">Gray</span>
+        <label for="gray-input" class="switch">
+          <input id="gray-input" type="checkbox" />
+          <span class="switch-button"></span>
+          <span class="switch-status"></span>
+        </label>
+      </li>
+
+      <li>
+        <span class="switch-title">Clock</span>
+        <label for="clock-input" class="switch">
+          <input id="clock-input" type="checkbox" />
+          <span class="switch-button"></span>
+          <span class="switch-status"></span>
+        </label>
+      </li>
+
+    </ul>
   </body>
   <script src='./scripts/step.js'></script>
 </html>
