@@ -20,11 +20,11 @@ function startTime() {
 }
 startTime();
 
+var grayInputElement = document.getElementById('gray-input');
 
+// chrome.storage.sync.set({'grayInput': grayInputElement.checked});
 
-
-var clockInputElement = document.getElementById('clock-input');
-
-clockInputElement.addEventListener('change', function () {
-  console.log('clock input change');
+grayInputElement.addEventListener('change', function () {
+  chrome.tabs.executeScript(null, {file: "scripts/gray.js"});
+  // chrome.storage.sync.set({'grayInput': grayInputElement.checked});
 });
