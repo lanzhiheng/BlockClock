@@ -22,9 +22,11 @@ startTime();
 
 var grayInputElement = document.getElementById('gray-input');
 
-// chrome.storage.sync.set({'grayInput': grayInputElement.checked});
+chrome.storage.sync.get('grayInput', function(value) {
+  grayInputElement.checked = value.grayInput ? true : false;
+})
 
 grayInputElement.addEventListener('change', function () {
   chrome.tabs.executeScript(null, {file: "scripts/gray.js"});
-  // chrome.storage.sync.set({'grayInput': grayInputElement.checked});
+  chrome.storage.sync.set({'grayInput': grayInputElement.checked});
 });
