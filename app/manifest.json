@@ -21,7 +21,8 @@
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
-      "css": ["./styles/gray.css"]
+      "css": ["./styles/gray.css"],
+      "js": ["./scripts/eventScript.js"]
     }
   ],
   "permissions": [
