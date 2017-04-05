@@ -1,0 +1,10 @@
+{
+  "name": {
+    "message": "中断闹钟",
+    "description": "App name"
+  },
+  "say": {
+    "message": "你好世界",
+    "description": "Say hello"
+  }
+}

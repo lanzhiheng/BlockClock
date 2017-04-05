@@ -1,0 +1,10 @@
+{
+  "name": {
+    "message": "Block Clock",
+    "description": "App name"
+  },
+  "say": {
+    "message": "Hello World",
+    "description": "Say hello"
+  }
+}
